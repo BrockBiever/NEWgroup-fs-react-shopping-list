@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 
-//create function for shopping list section 
 
-// create variables for shopping list function with set variables
+export const fetchGrocery = () => {
+  return axios.get('/api/groceries');
+  };
+  
+  export const postGrocery = (groceryData) => {
+  return axios.post('/api/groceries', groceryData);
+  };
+  
+  export const deleteGrocery = (id) => {
+    return axios.delete(`/api/groceries/${id}`);
+  };
+  
+  export const updateGrocery = (id) => {
+    return axios.put(`/api/groceries/${id}`);
+  };
 
-// on load call fetch function
 
-// fetch shopping list from the server with a get 
-
-// create a add Item function using post that also renders the item
 
 
 
